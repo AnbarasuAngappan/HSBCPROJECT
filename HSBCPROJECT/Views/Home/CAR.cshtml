@@ -1,0 +1,111 @@
+﻿<style>
+    .wrapper-dropdown-5 {
+        position: relative;
+        width: 200px;
+        margin: 0 auto;
+        padding: 12px 15px;
+        background: #fff;
+        border-radius: 5px;
+        box-shadow: 0 1px 0 rgba(0,0,0,0.2);
+        cursor: pointer;
+        outline: none;
+        height:41px;
+    }
+        .textbox{
+        width:77px; 
+    }
+    .h2 {
+        background-color: #f6f6f6;
+        border-radius: 10px;
+    }
+    .dropdown {
+        cursor: pointer;
+        margin-top: -9px;
+        width: 149px;
+        height: 40px;
+        float: right;
+        border-radius: 18px;
+    }
+    
+</style>
+<div class="col-sm-12" style="background-color:#fdfdfd">
+    <h3 class="h2">ME - SFE</h3>
+    <br />
+    <div id="byorganization">
+        <h4><input type="radio" name="organization"/>By Organization</h4>
+        <table class="table" style="margin-left: 200px;height:100px;width:800px">
+            <tr>
+                <th style="float:right;">Country/group/Branch And User</th>
+                <td><input type="text" class="textbox" />&nbsp;<input type="text" class="textbox" />&nbsp;<input type="text" class="textbox" /></td>
+            </tr>
+            <tr>
+                <th style="float:right;">User Id</th>
+                <td><input type="text" class="textbox" /></td>
+            </tr>
+            <tr>
+                <th style="float:right;">WSID/Deal No</th>
+                <td><input type="text" class="textbox" />&nbsp;<input type="text" class="textbox" /></td>
+            </tr>
+        </table>
+    </div>
+    <div id="byotherAttribute">
+        <h4><input type="radio" name="organization" checked/>By Other Attribute</h4>
+        <table class="table" style="height:109px;">
+            <tr>
+                <th style="float:right;">Assigned WorkStation</th>
+                <td><input type="text" class="textbox" /></td>
+            </tr>
+            <tr>
+                <th style="float:right;">HUB Customer/Account No</th>
+                <td><input type="text" class="textbox" />&nbsp;<input type="text" class="textbox" />&nbsp;<input type="text" class="textbox" />&nbsp;<input type="text" class="textbox" />&nbsp;<input type="text" class="textbox" /></td>
+            </tr>
+            <tr>
+                <th style="float:right;padding-top:19px">Transaction Type</th>
+                <td><select class="wrapper-dropdown-5" style="width:148px"><option>Selext</option></select></td>
+            </tr>
+        </table>
+    </div>
+</div>
+<div>
+    <h3 class="h2">Select Car Status</h3>
+    <br />
+    <table class="table">
+        <tr>
+            <th style="width:32%;text-align:right;padding-top:19px;">Transaction Type</th>
+            <td style="width:71%"><select class="wrapper-dropdown-5"><option>Pending Approval</option></select></td>
+        </tr>
+    </table>
+</div>
+<br /><br /><br />
+<div>
+    <table style="width:100%">
+        <tr>
+            <td style="text-align:center;padding-right:700px">
+                <input type="submit" onclick="SendToAnother()" value="Send To Another" style="border-radius:14px;" />&nbsp;&nbsp;&nbsp;
+                <input type="submit" onclick="Approve()" value="Approve" style="border-radius:14px;" />&nbsp;&nbsp;&nbsp;
+                <input type="submit" onclick="Reject()" value="Dis-Approve" style="border-radius:14px;" />
+            </td>
+        </tr>
+    </table>
+</div>
+<br /><br />
+<div style="text-align:center;">
+    <h4 style="padding-right:400px" id="result"></h4>
+</div>
+<script>
+    function SendToAnother() {
+        $('#result').text("Procee is Going to Another Step.");
+        $('#result').css("color", "green");
+    }
+
+    function Approve() {
+        $('#result').text("Procee Approved Successfully.");
+        $('#result').css("color", "green");
+    }
+
+    function Reject() {
+        $('#result').text("Procee Rejected.");
+        $('#result').css("color", "red");
+    }
+
+</script>
